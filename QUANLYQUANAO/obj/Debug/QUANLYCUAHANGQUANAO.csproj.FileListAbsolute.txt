@@ -10,3 +10,16 @@ D:\Bai tap visual studio\QUANLYQUANAO\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO
 D:\Bai tap visual studio\QUANLYQUANAO\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
 D:\Bai tap visual studio\QUANLYQUANAO\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
 D:\Bai tap visual studio\QUANLYQUANAO\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYCUAHANGQUANAO.mdf
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYCUAHANGQUANAO_log.ldf
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe.config
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.pdb
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.AssemblyReference.cache
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmHoaDonBan.resources
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmNhanVien.resources
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.Properties.Resources.resources
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.GenerateResource.cache
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
+C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb

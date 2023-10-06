@@ -83,6 +83,26 @@ namespace QUANLYQUANAO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_bo_qua {
+            get {
+                object obj = ResourceManager.GetObject("icon bo qua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconsua {
+            get {
+                object obj = ResourceManager.GetObject("iconsua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lưu {
             get {
                 object obj = ResourceManager.GetObject("lưu", resourceCulture);
