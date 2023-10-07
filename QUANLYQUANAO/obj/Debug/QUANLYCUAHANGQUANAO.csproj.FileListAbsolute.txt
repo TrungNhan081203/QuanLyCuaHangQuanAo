@@ -23,3 +23,18 @@ C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\De
 C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
 C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
 C:\Users\P52\Documents\Thư mục mới\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYCUAHANGQUANAO.mdf
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYCUAHANGQUANAO_log.ldf
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe.config
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.pdb
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.AssemblyReference.cache
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.SuggestedBindingRedirects.cache
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmDMKhachHang.resources
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmHoaDonBan.resources
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmNhanVien.resources
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.Properties.Resources.resources
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.GenerateResource.cache
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
+D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
