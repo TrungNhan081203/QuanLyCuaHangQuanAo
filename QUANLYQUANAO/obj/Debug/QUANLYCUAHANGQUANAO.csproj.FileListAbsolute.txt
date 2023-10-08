@@ -38,3 +38,18 @@ D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAH
 D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
 D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
 D:\Desktop_G7_A04E\Project\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYCUAHANGQUANAO.mdf
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYCUAHANGQUANAO_log.ldf
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe.config
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.pdb
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.AssemblyReference.cache
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmDMKhachHang.resources
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmHoaDonBan.resources
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmNhanVien.resources
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.Properties.Resources.resources
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.GenerateResource.cache
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
+C:\Do An\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmtest.resources
