@@ -83,9 +83,29 @@ namespace QUANLYQUANAO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap danhsach {
+            get {
+                object obj = ResourceManager.GetObject("danhsach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_bo_qua {
             get {
                 object obj = ResourceManager.GetObject("icon bo qua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconQuanLyQuanAo {
+            get {
+                object obj = ResourceManager.GetObject("iconQuanLyQuanAo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +126,16 @@ namespace QUANLYQUANAO.Properties {
         internal static System.Drawing.Bitmap lưu {
             get {
                 object obj = ResourceManager.GetObject("lưu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mở {
+            get {
+                object obj = ResourceManager.GetObject("mở", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
