@@ -40,6 +40,8 @@ namespace QUANLYQUANAO
             dgvNhanVien.Columns[3].HeaderText = "Địa chỉ";
             dgvNhanVien.Columns[4].HeaderText = "Điện thoại";
             dgvNhanVien.Columns[5].HeaderText = "Ngày sinh";
+            dgvNhanVien.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+
             dgvNhanVien.Columns[0].Width = 100;
             dgvNhanVien.Columns[1].Width = 150;
             dgvNhanVien.Columns[2].Width = 100;

@@ -81,6 +81,8 @@ namespace QUANLYQUANAO
             dgvHoaDonBanHang.AllowUserToAddRows = false;
             dgvHoaDonBanHang.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
+          
+
         private void LoadInfoHoaDon()
         {
             string str;
@@ -93,6 +95,7 @@ namespace QUANLYQUANAO
             str = "SELECT TongTien FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             txtTongTien.Text = Fuctions.GetFieldValues(str);
         }
+         
 
         private void btnThem_Click(object sender, EventArgs e)
         {

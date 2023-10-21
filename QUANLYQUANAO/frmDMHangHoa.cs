@@ -67,6 +67,7 @@ namespace QUANLYQUANAO
 
         private void dgvHangHoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,7 +84,7 @@ namespace QUANLYQUANAO
             txtSoLuong.Text = dgvHangHoa.CurrentRow.Cells["SoLuong"].Value.ToString();
             txtDonGiaNhap.Text = dgvHangHoa.CurrentRow.Cells["DonGiaNhap "].Value.ToString();
             txtDonGiaBan.Text = dgvHangHoa.CurrentRow.Cells["DonGiaBan"].Value.ToString();
-
+           
 
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
@@ -149,11 +150,12 @@ namespace QUANLYQUANAO
                 MessageBox.Show("Mã hàng này đã tồn tại, bạn phải chọn mã hàng khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMaHang.Focus();
                 return;
-            }
-           sql = "INSERT INTO Hang(MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES(N'"
-                + txtMaHang.Text.Trim() + "',N'" + txtTenHang.Text.Trim() + "'," + txtSoLuong.Text.Trim() + "," + txtDonGiaNhap.Text + "," + txtDonGiaBan.Text.Trim() + "')";
+            } 
+            sql = "INSERT INTO Hang(MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES(N'"
+              + txtMaHang.Text.Trim().ToString() + "',N'" + txtTenHang.Text.Trim().ToString() + "'," + float.Parse(txtSoLuong.Text).ToString("0.0000") + "," + float.Parse(txtDonGiaNhap.Text).ToString("0.0000") + "," + float.Parse(txtDonGiaBan.Text).ToString("0.0000") + ")";
+            //sql = "INSERT INTO Hang(MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES(N'T', N'ten',1.0, 2.0, 23.7)";
 
-           
+
             Fuctions.RunSQL(sql);
             LoadDataGridView();
             // ResetValues();
@@ -193,8 +195,8 @@ namespace QUANLYQUANAO
             "',SoLuong=" + txtSoLuong.Text +
             ",Anh='" + txtAnh.Text + "',GhiChu=N'" + txtGhiChu.Text + "' WHERE MaHang=N'" + txtMaHang.Text + "'"; */
 
-            sql = "UPDATE Hang SET TenHang=N'" + txtTenHang.Text.Trim().ToString() + 
-                 ",SoLuong=N'" + txtSoLuong.Text + "' WHERE MaHang=N'" + txtMaHang.Text + "'";
+            sql = "UPDATE Hang SET TenHang = N'" + txtTenHang.Text.Trim().ToString() +
+                 "' , SoLuong='" + txtSoLuong.Text + "' WHERE MaHang=N'" + txtMaHang.Text+ "'";
          
            Fuctions.RunSQL(sql);
              LoadDataGridView();
@@ -249,6 +251,11 @@ namespace QUANLYQUANAO
         }
 
         private void txtTenHang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }

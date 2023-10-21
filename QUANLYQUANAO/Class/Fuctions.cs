@@ -83,7 +83,7 @@ namespace QUANLYQUANAO.Class
         public static string ConvertDateTime(string date)
         {
             string[] elements = date.Split('/');
-            string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
+            string dt = string.Format("{1}/{0}/{2}", elements[0], elements[1], elements[2]);
             return dt;
         }
 
