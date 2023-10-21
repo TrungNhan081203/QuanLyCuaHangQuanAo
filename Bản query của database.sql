@@ -19,7 +19,6 @@ Create Table Hang(
 )
 GO
 
-INSERT INTO Hang(MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES(N'k', N'ten',1.0, 2.0, 23.7)
 
 Create Table NhanVien(
 	MaNhanVien  nvarchar(10) Not Null,
@@ -63,9 +62,23 @@ ALTER TABLE HoaDonBan ADD CONSTRAINT FK_HoaDonBan_NhanVien FOREIGN KEY(MaNhanVie
 ALTER TABLE ChiTietHDBan ADD CONSTRAINT FK_ChiTietHDBan_HoaDonBan FOREIGN KEY(MaHDBan) REFERENCES HoaDonBan(MaHDBan)
 ALTER TABLE ChiTietHDBan ADD CONSTRAINT FK_ChiTietHDBan_Hang FOREIGN KEY(MaHang) REFERENCES Hang(MaHang)
 
-INSERT INTO  NHANVIEN(MaNhanVien,TenNhanVien, GioiTinh ,  DiaChi    , Dienthoai , NgaySinh   ) VALUES ('NV01',N'Nguyễn Hoài An','Nam','1 Bạch Đằng','0123456789', '2005-02-20'),
-('NV02',N'Nguyễn Hồng Thắm','Nữ','2 Bạch Đằng','0123456789', '2005-02-20'),
-('NV03',N'Nguyễn Văn Việt','Nam','3 Bạch Đằng','0123456789', '2005-02-20'),
-('NV04',N'Nguyễn Minh Tiến','Nam','4 Bạch Đằng','0123456789', '2005-02-20'),
-('NV05',N'Nguyễn Thị Thúy','Nữ','5 Bạch Đằng','0123456789', '2005-02-20')
+INSERT INTO  NHANVIEN(MaNhanVien,TenNhanVien, GioiTinh ,  DiaChi    , Dienthoai , NgaySinh   ) VALUES ('NV06',N'Nguyễn Hoài An','Nam',N'1 Bạch Đằng','0123456789', '2005-02-20'),
+('NV02',N'Nguyễn Hồng Thắm','Nữ',N'252 Võ Oanh','0123456789', '2005-02-20'),
+('NV03',N'Nguyễn Văn Việt','Nam',N'35 Bùi Viện','0123456789', '2005-02-20'),
+('NV04',N'Nguyễn Minh Tiến','Nam',N'452 Võ Thị Sáu','0123456789', '2005-02-20'),
+('NV05',N'Nguyễn Thị Thúy','Nữ',N'585 Trường Chinh','0123456789', '2005-02-20')
 
+INSERT INTO Khach ( MaKhach, TenKhach, DiaChi, DienThoai ) VALUES ( 'KH06' ,N' Nguyễn Thị Lan' ,N'12 Cao Văn Lầu',' 0179558513'),
+																  ( 'KH02' ,N' Ngô Văn Mạnh'      ,N'28 Vạn Kiếp',' 0843355524'),
+																  ('KH03'  ,N' Bùi Nguyễn Hồng Thúy' ,N'351 Đinh Bộ Lĩnh ',' 0973645201'),
+																  ('KH04'  ,N' Nguyễn Hưng Thịnh' ,N' 248 Trường Sa ',' 0789145206'),
+																  ('KH05'  ,N' Nguyễn Trần Mạnh' ,N'574 Hoàng Sa',' 0154307894')
+
+
+INSERT INTO Hang( MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES ('HH06', N'Sơ Mi',50,51000,52000),
+																	  ('HH02', N'Quần Tây',60,130000,140000),
+																	  ('HH03', N' Váy Ngắn',30,140000,160000),
+																	  ('HH04', N'Quần Kaki',55,90000,100000),
+																	  ('HH05', N'Áo Thun Trơn',70,120000,130000)
+
+														

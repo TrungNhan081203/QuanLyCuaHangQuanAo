@@ -292,6 +292,7 @@
             // 
             // dgvTKHoaDon
             // 
+            this.dgvTKHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTKHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTKHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTKHoaDon.Location = new System.Drawing.Point(0, 166);

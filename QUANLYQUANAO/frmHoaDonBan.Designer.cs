@@ -370,6 +370,7 @@
             // 
             // dgvHoaDonBanHang
             // 
+            this.dgvHoaDonBanHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDonBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDonBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHoaDonBanHang.Location = new System.Drawing.Point(3, 96);
