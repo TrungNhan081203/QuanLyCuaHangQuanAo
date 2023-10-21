@@ -62,11 +62,11 @@ ALTER TABLE HoaDonBan ADD CONSTRAINT FK_HoaDonBan_NhanVien FOREIGN KEY(MaNhanVie
 ALTER TABLE ChiTietHDBan ADD CONSTRAINT FK_ChiTietHDBan_HoaDonBan FOREIGN KEY(MaHDBan) REFERENCES HoaDonBan(MaHDBan)
 ALTER TABLE ChiTietHDBan ADD CONSTRAINT FK_ChiTietHDBan_Hang FOREIGN KEY(MaHang) REFERENCES Hang(MaHang)
 
-INSERT INTO  NHANVIEN(MaNhanVien,TenNhanVien, GioiTinh ,  DiaChi    , Dienthoai , NgaySinh   ) VALUES ('NV06',N'Nguyễn Hoài An','Nam',N'1 Bạch Đằng','0123456789', '2005-02-20'),
-('NV02',N'Nguyễn Hồng Thắm','Nữ',N'252 Võ Oanh','0123456789', '2005-02-20'),
-('NV03',N'Nguyễn Văn Việt','Nam',N'35 Bùi Viện','0123456789', '2005-02-20'),
-('NV04',N'Nguyễn Minh Tiến','Nam',N'452 Võ Thị Sáu','0123456789', '2005-02-20'),
-('NV05',N'Nguyễn Thị Thúy','Nữ',N'585 Trường Chinh','0123456789', '2005-02-20')
+INSERT INTO  NHANVIEN(MaNhanVien,TenNhanVien, GioiTinh ,  DiaChi    , Dienthoai , NgaySinh   ) VALUES ('NV06',N'Nguyễn Hoài An',N'Nam',N'1 Bạch Đằng','0123456789', '2005-02-20'),
+('NV02',N'Nguyễn Hồng Thắm',N'Nữ',N'252 Võ Oanh','0784351246', '2005-02-20'),
+('NV03',N'Nguyễn Văn Việt',N'Nam',N'35 Bùi Viện','0412785134', '2005-02-20'),
+('NV04',N'Nguyễn Minh Tiến',N'Nam',N'452 Võ Thị Sáu','0120420320', '2005-02-20'),
+('NV05',N'Nguyễn Thị Thúy',N'Nữ',N'585 Trường Chinh','0231023010', '2005-02-20')
 
 INSERT INTO Khach ( MaKhach, TenKhach, DiaChi, DienThoai ) VALUES ( 'KH06' ,N' Nguyễn Thị Lan' ,N'12 Cao Văn Lầu',' 0179558513'),
 																  ( 'KH02' ,N' Ngô Văn Mạnh'      ,N'28 Vạn Kiếp',' 0843355524'),
@@ -81,4 +81,15 @@ INSERT INTO Hang( MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES ('HH06', N
 																	  ('HH04', N'Quần Kaki',55,90000,100000),
 																	  ('HH05', N'Áo Thun Trơn',70,120000,130000)
 
-														
+	update NhanVien
+	set Dienthoai='0784351246'
+	where MaNhanVien='NV02'
+	update NhanVien
+	set Dienthoai='0412785134'
+	where MaNhanVien='NV03'
+	update NhanVien
+	set Dienthoai='0120420320'
+	where MaNhanVien='NV04'
+	update NhanVien
+	set Dienthoai='0231023010'
+	where MaNhanVien='NV05'

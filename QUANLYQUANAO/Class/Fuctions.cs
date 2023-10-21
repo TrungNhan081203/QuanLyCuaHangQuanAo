@@ -80,31 +80,96 @@ namespace QUANLYQUANAO.Class
                 return true;
             else return false;
         }
-        public static string ConvertDateTime(string date)
-        {
-            string[] elements = date.Split('/');
-            string dt = string.Format("{1}/{0}/{2}", elements[0], elements[1], elements[2]);
-            return dt;
-        }
+       // public static string ConvertDateTime(string date)
+       //{
+       //    string[] elements = date.Split('/');
+       //    string dt = string.Format("{1}/{0}/{2}", elements[0], elements[1], elements[2]);
+       //    return dt;
+       //}
+       public static string ConvertDateTime(string date)
+       {
+           string[] elements = date.Split('/');
+           if (elements.Length == 3)
+           {
+               // Kiểm tra xem mảng elements có đủ 3 phần tử không
+               string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
+               return dt;
+           }
+           else
+           {
+               // Trả về chuỗi rỗng hoặc thông báo lỗi nếu chuỗi đầu vào không đúng định dạng.
+               return "Invalid date format";
+           }
+       }
+     
 
+
+
+     //  public static void RunSqlDel(string sql)
+     //  {
+     //      SqlCommand cmd = new SqlCommand();
+     //      cmd.Connection = Fuctions.Con;
+     //      cmd.CommandText = sql;
+     //      try
+     //      {
+     //          cmd.ExecuteNonQuery();
+     //      }
+     //      catch (Exception ex)
+     //      {
+     //          //MessageBox.Show("Dữ liệu đang được dùng, không thể xoá...", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+     //          MessageBox.Show(ex.ToString());
+     //      }
+     //      cmd.Dispose();
+     //      cmd = null;
+     //  }
         public static void RunSqlDel(string sql)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = Fuctions.Con;
-            cmd.CommandText = sql;
+            SqlCommand cmd; // Đối tượng thuộc lớp SqlCommand
+            cmd = new SqlCommand();
+            cmd.Connection = Con; // Gán kết nối
+            cmd.CommandText = sql; // Gán lệnh SQL
             try
             {
-                cmd.ExecuteNonQuery();
+                if (IsDateInSQL(sql)) // Kiểm tra xem truy vấn có chứa ngày tháng không
+                {
+                    if (IsDate(FindDateInSQL(sql))) // Kiểm tra xem ngày tháng trong truy vấn có hợp lệ không
+                    {
+                        cmd.ExecuteNonQuery(); // Thực hiện câu lệnh SQL
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ngày tháng không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    cmd.ExecuteNonQuery(); // Thực hiện câu lệnh SQL
+                }
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Dữ liệu đang được dùng, không thể xoá...", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 MessageBox.Show(ex.ToString());
             }
-            cmd.Dispose();
+            cmd.Dispose(); // Giải phóng bộ nhớ
             cmd = null;
         }
-     // FillCombo có tác dụng lấy dữ liệu từ một câu lệnh SQL đổ vào một ComboBox.
+
+        // Kiểm tra xem trong câu truy vấn SQL có chứa ngày tháng không
+        public static bool IsDateInSQL(string sql)
+        {
+            return sql.ToLower().Contains("datetime");
+        }
+
+        // Tìm ngày tháng trong câu truy vấn SQL
+        public static string FindDateInSQL(string sql)
+        {
+            // Cài đặt logic để trích xuất ngày tháng từ câu truy vấn SQL dựa vào cú pháp của bạn
+            // Ví dụ: sử dụng biểu thức chính quy để tìm chuỗi ngày tháng
+            // Trả về chuỗi ngày tháng tìm thấy
+            return "dd/MM/yyyy";
+        }
+
+        // FillCombo có tác dụng lấy dữ liệu từ một câu lệnh SQL đổ vào một ComboBox.
         public static void FillCombo(string sql, ComboBox cbo, string ma, string ten)
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, Con);

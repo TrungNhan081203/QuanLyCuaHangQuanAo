@@ -226,11 +226,14 @@
             // 
             // dtpNgayBan
             // 
-            this.dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayBan.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayBan.Location = new System.Drawing.Point(644, 56);
             this.dtpNgayBan.Name = "dtpNgayBan";
             this.dtpNgayBan.Size = new System.Drawing.Size(302, 22);
             this.dtpNgayBan.TabIndex = 16;
+            this.dtpNgayBan.Value = new System.DateTime(2023, 10, 21, 0, 0, 0, 0);
+            this.dtpNgayBan.ValueChanged += new System.EventHandler(this.dtpNgayBan_ValueChanged);
             // 
             // txtTenNhanVien
             // 

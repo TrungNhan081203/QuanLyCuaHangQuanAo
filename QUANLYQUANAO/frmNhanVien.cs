@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QUANLYQUANAO.Class;
+using System.Globalization;
 
 namespace QUANLYQUANAO
 {
@@ -40,6 +41,7 @@ namespace QUANLYQUANAO
             dgvNhanVien.Columns[3].HeaderText = "Địa chỉ";
             dgvNhanVien.Columns[4].HeaderText = "Điện thoại";
             dgvNhanVien.Columns[5].HeaderText = "Ngày sinh";
+
             dgvNhanVien.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
 
             dgvNhanVien.Columns[0].Width = 100;
@@ -157,7 +159,27 @@ namespace QUANLYQUANAO
                 txtMaNhanVien.Text = "";
                 return;
             }
-            sql = "INSERT INTO NhanVien(MaNhanVien,TenNhanVien,GioiTinh, DiaChi,DienThoai, NgaySinh) VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + txtSDT.Text + "','" + Fuctions.ConvertDateTime(dtpNgaySinh.Text) + "')";
+            DateTime ngaySinh;
+            if (DateTime.TryParseExact(dtpNgaySinh.Text, "dd/MM/yyyy", null, DateTimeStyles.None, out ngaySinh))
+            {
+                // Chuyển đổi thành công
+                sql = "INSERT INTO NhanVien(MaNhanVien, TenNhanVien, GioiTinh, DiaChi, DienThoai, NgaySinh) " +
+                      "VALUES (N'" + txtMaNhanVien.Text.Trim() + "', N'" + txtTenNhanVien.Text.Trim() + "', N'" + gt + "', " +
+                      "N'" + txtDiaChi.Text.Trim() + "', '" + txtSDT.Text + "', '" + ngaySinh.ToString("yyyy-MM-dd") + "')";
+                // Sử dụng ngaySinh.ToString("yyyy-MM-dd") để lấy định dạng ngày tháng "yyyy-MM-dd" phù hợp với SQL.
+            }
+            else
+            {
+                // Hiển thị thông báo lỗi vì ngày tháng không hợp lệ
+                MessageBox.Show("Ngày tháng không hợp lệ. Vui lòng nhập ngày tháng theo định dạng 'dd/MM/yyyy'.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+   //        sql = "INSERT INTO NhanVien(MaNhanVien, TenNhanVien, GioiTinh, DiaChi, DienThoai, NgaySinh) " +
+   //  "VALUES (N'" + txtMaNhanVien.Text.Trim() + "', N'" + txtTenNhanVien.Text.Trim() + "', N'" + gt + "', " +
+   //  "N'" + txtDiaChi.Text.Trim() + "', '" + txtSDT.Text + "', " +
+   //  "CONVERT(DATETIME, '" + DateTime.ParseExact(dtpNgaySinh.Text, "dd/MM/yyyy", null) + "', 103))";
+   //
+            //   sql = "INSERT INTO NhanVien(MaNhanVien,TenNhanVien,GioiTinh, DiaChi,DienThoai, NgaySinh) VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + txtSDT.Text + "','" + Fuctions.ConvertDateTime(dtpNgaySinh.Text.Trim()) + "')";
             Fuctions.RunSQL(sql);
             LoadDataGridView();
             ResetValues();

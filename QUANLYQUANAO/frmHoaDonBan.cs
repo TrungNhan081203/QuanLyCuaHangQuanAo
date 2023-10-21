@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,13 +82,26 @@ namespace QUANLYQUANAO
             dgvHoaDonBanHang.AllowUserToAddRows = false;
             dgvHoaDonBanHang.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
-          
+        DateTime ConvertStringToDate(string dateInString)
+        {
+            try
+            {
+                //string SSD = dateInString;
+                //DateTime date = Convert.ToDateTime(SSD);
+                //string strDate = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", date);
+                //return Convert.ToDateTime(strDate);
+
+                return DateTime.ParseExact(dateInString, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            }
+            catch (Exception) { }
+            return DateTime.Today;
+        }
 
         private void LoadInfoHoaDon()
         {
             string str;
             str = "SELECT NgayBan FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
-            dtpNgayBan.Text = Fuctions.ConvertDateTime(Fuctions.GetFieldValues(str));
+            dtpNgayBan.Text = Fuctions.ConvertDateTime(Fuctions.GetFieldValues(str)); 
             str = "SELECT MaNhanVien FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             cbMaNhanVien.Text = Fuctions.GetFieldValues(str);
             str = "SELECT MaKhach FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
@@ -388,7 +402,7 @@ namespace QUANLYQUANAO
             exRange.Range["A2:B2"].Value = "141 Điện Biên Phủ-TP Hồ Chí Minh";
             exRange.Range["A3:B3"].MergeCells = true;
             exRange.Range["A3:B3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["A3:B3"].Value = "Điện thoại: (04)38526419";
+            exRange.Range["A3:B3"].Value = "Điện thoại: (08)38526419";
             exRange.Range["C2:E2"].Font.Size = 16;
             exRange.Range["C2:E2"].Font.Bold = true;
             exRange.Range["C2:E2"].Font.ColorIndex = 3; //Màu đỏ
@@ -516,6 +530,11 @@ namespace QUANLYQUANAO
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtpNgayBan_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     } 
 }
