@@ -86,10 +86,7 @@ namespace QUANLYQUANAO
         {
             try
             {
-                //string SSD = dateInString;
-                //DateTime date = Convert.ToDateTime(SSD);
-                //string strDate = String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", date);
-                //return Convert.ToDateTime(strDate);
+          
 
                 return DateTime.ParseExact(dateInString, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             }
@@ -532,10 +529,6 @@ namespace QUANLYQUANAO
             this.Close();
         }
 
-        private void dtpNgayBan_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     } 
 }
 

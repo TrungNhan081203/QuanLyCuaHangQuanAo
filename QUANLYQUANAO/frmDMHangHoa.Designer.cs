@@ -170,7 +170,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+         
             // 
             // pictureBox3
             // 
@@ -358,7 +358,7 @@
             this.txtTenHang.Name = "txtTenHang";
             this.txtTenHang.Size = new System.Drawing.Size(288, 24);
             this.txtTenHang.TabIndex = 25;
-            this.txtTenHang.TextChanged += new System.EventHandler(this.txtTenHang_TextChanged);
+          //  this.txtTenHang.TextChanged += new System.EventHandler(this.txtTenHang_TextChanged);
             // 
             // txtMaHang
             // 
@@ -420,7 +420,9 @@
             this.dgvHangHoa.RowTemplate.Height = 24;
             this.dgvHangHoa.Size = new System.Drawing.Size(995, 359);
             this.dgvHangHoa.TabIndex = 6;
-            this.dgvHangHoa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellContentClick);
+           // this.dgvHangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellClick);
+          //  this.dgvHangHoa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellContentClick);
+            this.dgvHangHoa.Click += new System.EventHandler(this.dgvHangHoa_Click);
             // 
             // frmDMHangHoa
             // 

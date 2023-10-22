@@ -69,8 +69,7 @@ namespace QUANLYQUANAO
             }
             txtMaNhanVien.Text = dgvNhanVien.CurrentRow.Cells["MaNhanVien"].Value.ToString();
             txtTenNhanVien.Text = dgvNhanVien.CurrentRow.Cells["TenNhanVien"].Value.ToString();
-            //if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam") rdoGioiTinhNam.Checked = true;
-            //else rdoGioiTinhNam.Checked = false;
+         ;
             if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
             {
                 rdoGioiTinhNam.Checked = true;
@@ -140,13 +139,7 @@ namespace QUANLYQUANAO
                 dtpNgaySinh.Focus();
                 return;
             }
-            /*  if (!Fuctions.IsDate(dtpNgaySinh.Text))
-              {
-                  MessageBox.Show("Bạn phải nhập lại ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                  // mskNgaySinh.Text = "";
-                  dtpNgaySinh.Focus();
-                  return;
-              }*/
+           
             if (rdoGioiTinhNam.Checked == true)
                 gt = "Nam";
             else
@@ -173,13 +166,7 @@ namespace QUANLYQUANAO
                // Hiển thị thông báo lỗi vì ngày tháng không hợp lệ
                MessageBox.Show("Ngày tháng không hợp lệ. Vui lòng nhập ngày tháng theo định dạng 'dd/MM/yyyy'.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
            }
-//
-//       sql = "INSERT INTO NhanVien(MaNhanVien, TenNhanVien, GioiTinh, DiaChi, DienThoai, NgaySinh) " +
-// "VALUES (N'" + txtMaNhanVien.Text.Trim() + "', N'" + txtTenNhanVien.Text.Trim() + "', N'" + gt + "', " +
-//  "N'" + txtDiaChi.Text.Trim() + "', '" + txtSDT.Text + "', " +
-// //  "CONVERT(DATETIME, '" + DateTime.ParseExact(dtpNgaySinh.Text, "dd/MM/yyyy", null) + "', 103))";
-   //
-           //   sql = "INSERT INTO NhanVien(MaNhanVien,TenNhanVien,GioiTinh, DiaChi,DienThoai, NgaySinh) VALUES (N'" + txtMaNhanVien.Text.Trim() + "',N'" + txtTenNhanVien.Text.Trim() + "',N'" + gt + "',N'" + txtDiaChi.Text.Trim() + "','" + txtSDT.Text + "','" + Fuctions.ConvertDateTime(dtpNgaySinh.Text.Trim()) + "')";
+
             Fuctions.RunSQL(sql);
             LoadDataGridView();
             ResetValues();
@@ -286,11 +273,6 @@ namespace QUANLYQUANAO
         private void btnDong_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void txtTenNhanVien_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

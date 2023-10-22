@@ -68,9 +68,6 @@ namespace QUANLYQUANAO
             frmTimKiemHD.Show();
         }
 
-        private void mnuBaoCao_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -287,7 +287,7 @@
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(302, 22);
             this.txtTenNhanVien.TabIndex = 17;
-            this.txtTenNhanVien.TextChanged += new System.EventHandler(this.txtTenNhanVien_TextChanged);
+            
             // 
             // txtMaNhanVien
             // 

@@ -247,7 +247,7 @@
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(288, 22);
             this.txtTenKhach.TabIndex = 25;
-            this.txtTenKhach.TextChanged += new System.EventHandler(this.txtTenKhach_TextChanged);
+           
             // 
             // txtMaKhach
             // 

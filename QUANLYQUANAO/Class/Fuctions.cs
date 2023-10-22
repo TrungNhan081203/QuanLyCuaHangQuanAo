@@ -80,48 +80,6 @@ namespace QUANLYQUANAO.Class
                 return true;
             else return false;
         }
-       // public static string ConvertDateTime(string date)
-       //{
-       //    string[] elements = date.Split('/');
-       //    string dt = string.Format("{1}/{0}/{2}", elements[0], elements[1], elements[2]);
-       //    return dt;
-       //}
-    // public static string ConvertDateTime(string date)
-    // {
-    //     string[] elements = date.Split('/');
-    //     if (elements.Length == 3)
-    //     {
-    //         // Kiểm tra xem mảng elements có đủ 3 phần tử không
-    //         string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
-    //         return dt;
-    //     }
-    //     else
-    //     {
-    //         // Trả về chuỗi rỗng hoặc thông báo lỗi nếu chuỗi đầu vào không đúng định dạng.
-    //         return "Invalid date format";
-    //     }
-    // }
-     
-
-
-
-     //  public static void RunSqlDel(string sql)
-     //  {
-     //      SqlCommand cmd = new SqlCommand();
-     //      cmd.Connection = Fuctions.Con;
-     //      cmd.CommandText = sql;
-     //      try
-     //      {
-     //          cmd.ExecuteNonQuery();
-     //      }
-     //      catch (Exception ex)
-     //      {
-     //          //MessageBox.Show("Dữ liệu đang được dùng, không thể xoá...", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-     //          MessageBox.Show(ex.ToString());
-     //      }
-     //      cmd.Dispose();
-     //      cmd = null;
-     //  }
         public static void RunSqlDel(string sql)
         {
             SqlCommand cmd; // Đối tượng thuộc lớp SqlCommand
