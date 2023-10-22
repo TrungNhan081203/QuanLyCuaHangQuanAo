@@ -45,16 +45,16 @@ namespace QUANLYQUANAO.Class
         }
 
         //Hàm kiểm tra khoá trùng
-        public static bool CheckKey(string sql)
+        public static bool CheckKey(string sql) // hàm trả về kiểu bool if true là trùng 
         {
             SqlDataAdapter dap = new SqlDataAdapter(sql, Con);
             DataTable table = new DataTable();
             dap.Fill(table);
-            if (table.Rows.Count > 0)
+            if (table.Rows.Count > 0) 
                 return true;
             else return false;
         }
-        //Hàm thực hiện câu lệnh SQL
+        //Hàm thực hiện câu lệnh SQL Phương Thức thực thi  update, xóa, sữa
         public static void RunSQL(string sql)
         {
             SqlCommand cmd; //Đối tượng thuộc lớp SqlCommand
@@ -63,11 +63,11 @@ namespace QUANLYQUANAO.Class
             cmd.CommandText = sql; //Gán lệnh SQL
             try
             {
-                cmd.ExecuteNonQuery(); //Thực hiện câu lệnh SQL
+                cmd.ExecuteNonQuery(); //Thực hiện câu lệnh SQL ( thực thi nhưng ko truy vấn )
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.ToString()); 
             }
             cmd.Dispose();//Giải phóng bộ nhớ
             cmd = null;
@@ -86,21 +86,21 @@ namespace QUANLYQUANAO.Class
        //    string dt = string.Format("{1}/{0}/{2}", elements[0], elements[1], elements[2]);
        //    return dt;
        //}
-       public static string ConvertDateTime(string date)
-       {
-           string[] elements = date.Split('/');
-           if (elements.Length == 3)
-           {
-               // Kiểm tra xem mảng elements có đủ 3 phần tử không
-               string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
-               return dt;
-           }
-           else
-           {
-               // Trả về chuỗi rỗng hoặc thông báo lỗi nếu chuỗi đầu vào không đúng định dạng.
-               return "Invalid date format";
-           }
-       }
+    // public static string ConvertDateTime(string date)
+    // {
+    //     string[] elements = date.Split('/');
+    //     if (elements.Length == 3)
+    //     {
+    //         // Kiểm tra xem mảng elements có đủ 3 phần tử không
+    //         string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
+    //         return dt;
+    //     }
+    //     else
+    //     {
+    //         // Trả về chuỗi rỗng hoặc thông báo lỗi nếu chuỗi đầu vào không đúng định dạng.
+    //         return "Invalid date format";
+    //     }
+    // }
      
 
 
@@ -205,7 +205,7 @@ namespace QUANLYQUANAO.Class
             {
                 mDigit = Convert.ToInt32(sNumber.Substring(i, 1));
                 mTemp = mTemp + " " + mNumText[mDigit];
-                /* if (mLen == i) // Chữ số cuối cùng không cần xét tiếp break; 
+                /*if (mLen == i) // Chữ số cuối cùng không cần xét tiếp break; 
                     switch ((mLen - i) % 9)
                     {
                         case 0:

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QUANLYQUANAO.Class;
-using COMExcel = Microsoft.Office.Interop.Excel;
+using COMExcel = Microsoft.Office.Interop.Excel; // thêm thư viện của excel
 
 namespace QUANLYQUANAO
 {
@@ -96,12 +96,12 @@ namespace QUANLYQUANAO
             catch (Exception) { }
             return DateTime.Today;
         }
-
+        // hàm nạp chi tiết h
         private void LoadInfoHoaDon()
         {
             string str;
             str = "SELECT NgayBan FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
-            dtpNgayBan.Text = Fuctions.ConvertDateTime(Fuctions.GetFieldValues(str)); 
+            dtpNgayBan.Text = Fuctions.GetFieldValues(str); 
             str = "SELECT MaNhanVien FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             cbMaNhanVien.Text = Fuctions.GetFieldValues(str);
             str = "SELECT MaKhach FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
@@ -124,7 +124,7 @@ namespace QUANLYQUANAO
         private void ResetValues()
         {
             txtMaHDBan.Text = "";
-            dtpNgayBan.Text = DateTime.Now.ToShortDateString();
+            dtpNgayBan.Value = DateTime.Now;
             cbMaNhanVien.Text = "";
             cbMaKhachHang.Text = "";
             txtTongTien.Text = "0";
@@ -168,7 +168,7 @@ namespace QUANLYQUANAO
                     return;
                 }
                 sql = "INSERT INTO HoaDonBan(MaHDBan, NgayBan, MaNhanVien, MaKhach, TongTien) VALUES (N'" + txtMaHDBan.Text.Trim() + "','" +
-                        Fuctions.ConvertDateTime(dtpNgayBan.Text.Trim()) + "',N'" + cbMaNhanVien.SelectedValue + "',N'" +
+                        dtpNgayBan.Value + "',N'" + cbMaNhanVien.SelectedValue + "',N'" +
                         cbMaKhachHang.SelectedValue + "'," + txtTongTien.Text + ")";
                 Fuctions.RunSQL(sql);
             }
