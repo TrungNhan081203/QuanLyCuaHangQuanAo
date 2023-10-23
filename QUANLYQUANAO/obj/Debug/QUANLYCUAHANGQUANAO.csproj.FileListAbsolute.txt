@@ -150,3 +150,4 @@ D:\DA DEs chưa xong\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUA
 D:\DA DEs chưa xong\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CopyComplete
 D:\DA DEs chưa xong\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
 D:\DA DEs chưa xong\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
+D:\DA DEs chưa xong\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.Login.resources

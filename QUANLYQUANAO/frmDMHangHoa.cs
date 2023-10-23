@@ -29,8 +29,6 @@ namespace QUANLYQUANAO
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;
             LoadDataGridView();
-
-
             ResetValues();
         }
         private void ResetValues()
@@ -64,8 +62,28 @@ namespace QUANLYQUANAO
             dgvHangHoa.AllowUserToAddRows = false;
             dgvHangHoa.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
-
-     
+        private void dgvHangHoa_Click(object sender, EventArgs e)
+        {
+            if (btnThem.Enabled == false)
+            {
+                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaHang.Focus();
+                return;
+            }
+            if (Hang.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            txtMaHang.Text = dgvHangHoa.CurrentRow.Cells["MaHang"].Value.ToString();
+            txtTenHang.Text = dgvHangHoa.CurrentRow.Cells["TenHang"].Value.ToString();
+            txtSoLuong.Text = dgvHangHoa.CurrentRow.Cells["SoLuong"].Value.ToString();
+            txtDonGiaNhap.Text = dgvHangHoa.CurrentRow.Cells["DonGiaNhap"].Value.ToString();
+            txtDonGiaBan.Text = dgvHangHoa.CurrentRow.Cells["DonGiaBan"].Value.ToString();
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnBoQua.Enabled = true;
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -128,9 +146,10 @@ namespace QUANLYQUANAO
                 return;
             } 
             sql = "INSERT INTO Hang(MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES(N'"
-              + txtMaHang.Text.Trim().ToString() + "',N'" + txtTenHang.Text.Trim().ToString() + "'," + float.Parse(txtSoLuong.Text).ToString("0.0000") + "," + float.Parse(txtDonGiaNhap.Text).ToString("0.0000") + "," + float.Parse(txtDonGiaBan.Text).ToString("0.0000") + ")";
-            
-
+              + txtMaHang.Text.Trim().ToString() + "',N'" + txtTenHang.Text.Trim().ToString() + "'," 
+              + float.Parse(txtSoLuong.Text).ToString("0.0000") + "," 
+              + float.Parse(txtDonGiaNhap.Text).ToString("0.0000") + ","
+              + float.Parse(txtDonGiaBan.Text).ToString("0.0000") + ")";
 
             Fuctions.RunSQL(sql);
             LoadDataGridView();
@@ -163,18 +182,13 @@ namespace QUANLYQUANAO
                  txtTenHang.Focus();
                  return;
              }
-
-          
-
             sql = "UPDATE Hang SET TenHang = N'" + txtTenHang.Text.Trim().ToString() +
                  "' , SoLuong='" + txtSoLuong.Text + "' , DonGiaNhap='" + txtDonGiaNhap.Text + "',DonGiaBan='" + txtDonGiaBan.Text +  "' WHERE MaHang=N'" + txtMaHang.Text+ "'";
          
            Fuctions.RunSQL(sql);
              LoadDataGridView();
              ResetValues();
-             btnBoQua.Enabled = false;
-          
-       
+             btnBoQua.Enabled = false;        
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
@@ -220,30 +234,5 @@ namespace QUANLYQUANAO
         {
             this.Close();
         }
-
-      
-        private void dgvHangHoa_Click(object sender, EventArgs e)
-        {
-            if (btnThem.Enabled == false)
-            {
-                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMaHang.Focus();
-                return;
-            }
-            if (Hang.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            txtMaHang.Text = dgvHangHoa.CurrentRow.Cells["MaHang"].Value.ToString();
-            txtTenHang.Text = dgvHangHoa.CurrentRow.Cells["TenHang"].Value.ToString();
-            txtSoLuong.Text = dgvHangHoa.CurrentRow.Cells["SoLuong"].Value.ToString();
-            txtDonGiaNhap.Text = dgvHangHoa.CurrentRow.Cells["DonGiaNhap"].Value.ToString();
-            txtDonGiaBan.Text = dgvHangHoa.CurrentRow.Cells["DonGiaBan"].Value.ToString();
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            btnBoQua.Enabled = true;
-        }
-
     }
 }

@@ -48,6 +48,11 @@ Create Table ChiTietHDBan(
 	Thanhtien int Not Null,
 )
 GO
+create table taikhoan(
+TenDN nvarchar(50) not null,
+MatKhau nvarchar(50) not null,
+
+)
 
 --T?O KHÓA CHÍNH
 ALTER TABLE Khach ADD CONSTRAINT PK_Khach PRIMARY KEY(MaKhach)
@@ -55,7 +60,8 @@ ALTER TABLE Hang ADD CONSTRAINT PK_Hang PRIMARY KEY(MaHang)
 ALTER TABLE NhanVien ADD CONSTRAINT PK_NhanVien PRIMARY KEY(MaNhanVien)
 ALTER TABLE HoaDonBan ADD CONSTRAINT PK_HoaDonBan PRIMARY KEY(MaHDBan)
 ALTER TABLE ChiTietHDBan ADD CONSTRAINT PK_ChiTietHDBan PRIMARY KEY(MaHDBan,MaHang)
-
+ALTER TABLE taikhoan ADD CONSTRAINT PK_taikhoan PRIMARY KEY(TenDN ,MatKhau)
+															
 --T?O KHÓA NGO?I
 ALTER TABLE HoaDonBan ADD CONSTRAINT FK_HoaDonBan_Khach FOREIGN KEY(MaKhach) REFERENCES Khach(MaKhach)
 ALTER TABLE HoaDonBan ADD CONSTRAINT FK_HoaDonBan_NhanVien FOREIGN KEY(MaNhanVien) REFERENCES NhanVien(MaNhanVien)
@@ -80,6 +86,9 @@ INSERT INTO Hang( MaHang,TenHang,SoLuong,DonGiaNhap,DonGiaBan) VALUES ('HH06', N
 																	  ('HH03', N' Váy Ngắn',30,140000,160000),
 																	  ('HH04', N'Quần Kaki',55,90000,100000),
 																	  ('HH05', N'Áo Thun Trơn',70,120000,130000)
+
+INSERT INTO taikhoan( TenDN,MatKhau) VALUES ('admin', 'admin'),
+											('nhanvien', 'nhanvien')
 
 	update NhanVien
 	set Dienthoai='0784351246'

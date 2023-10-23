@@ -13,9 +13,23 @@ namespace QUANLYQUANAO
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        public frmMain(int type)
         {
             InitializeComponent();
+            if (type == 0)
+            {
+                mnuNhanVien.Enabled = false;
+            }
+            if(type == 1) 
+            {
+                mnuNhanVien.Enabled = true;
+            }
+            if (type == 2)
+            {
+                
+                
+            }
+
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -26,20 +40,21 @@ namespace QUANLYQUANAO
         private void mnuThoat_Click(object sender, EventArgs e)
         {
             Class.Fuctions.Disconnect(); //Đóng kết nối
-            Application.Exit(); //Thoát
+            this.Close(); //Thoát
+            Login login = new Login();
+            login.ShowDialog();
         }
-
         private void mnuNhanVien_Click(object sender, EventArgs e)
         {
-            IsMdiContainer = true;
+            //IsMdiContainer = true;
            frmNhanVien frmNhanVien = new frmNhanVien(); //Khởi tạo đối tượng
-           //frmNhanVien.MdiParent = this;
+           ///frmNhanVien.MdiParent = this;
             frmNhanVien.ShowDialog(); //Hiển thị
         }
 
         private void mnuKhachHang_Click(object sender, EventArgs e)
         {
-            IsMdiContainer = true;
+            //IsMdiContainer = true;
             frmDMKhachHang frmDMKhachHang = new frmDMKhachHang(); //Khởi tạo đối tượng
             //frmDMKhachHang.MdiParent = this;
             frmDMKhachHang.ShowDialog(); //Hiển thị
@@ -47,7 +62,7 @@ namespace QUANLYQUANAO
 
         private void mnuHangHoa_Click(object sender, EventArgs e)
         {
-            IsMdiContainer = true;
+            //IsMdiContainer = true;
             frmDMHangHoa frmDMHangHoa = new frmDMHangHoa(); //Khởi tạo đối tượng
             //frmDMHangHoa.MdiParent = this;
             frmDMHangHoa.ShowDialog(); //Hiển thị
@@ -55,7 +70,7 @@ namespace QUANLYQUANAO
 
         private void mnuHoaDonBan_Click(object sender, EventArgs e)
         {
-            IsMdiContainer = true;
+            //IsMdiContainer = true;
             frmHoaDonBan frmHoaDonBan = new frmHoaDonBan();
             //frmHoaDonBan.MdiParent = this;
             frmHoaDonBan.ShowDialog();
@@ -63,7 +78,7 @@ namespace QUANLYQUANAO
 
         private void mnuFindHoaDon_Click(object sender, EventArgs e)
         {
-            IsMdiContainer = true;
+            //IsMdiContainer = true;
             frmTimKiemHD frmTimKiemHD = new frmTimKiemHD();
             frmTimKiemHD.Show();
         }

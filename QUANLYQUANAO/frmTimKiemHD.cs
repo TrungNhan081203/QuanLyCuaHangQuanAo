@@ -74,6 +74,7 @@ namespace QUANLYQUANAO
             dgvTKHoaDon.Columns[0].HeaderText = "Mã HĐB";
             dgvTKHoaDon.Columns[1].HeaderText = "Mã nhân viên";
             dgvTKHoaDon.Columns[2].HeaderText = "Ngày bán";
+            dgvTKHoaDon.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvTKHoaDon.Columns[3].HeaderText = "Mã khách";
             dgvTKHoaDon.Columns[4].HeaderText = "Tổng tiền";
             dgvTKHoaDon.Columns[0].Width = 150;

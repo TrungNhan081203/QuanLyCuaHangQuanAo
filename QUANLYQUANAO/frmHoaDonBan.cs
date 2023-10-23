@@ -528,7 +528,7 @@ namespace QUANLYQUANAO
         {
             this.Close();
         }
-
+      
     } 
 }
 
